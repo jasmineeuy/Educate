@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const Home = () => {
   return (
@@ -19,7 +21,7 @@ const Home = () => {
 
           <form>
             <input type=" text" placeholder="Enter your zipcode" />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </form>
         </section>
 

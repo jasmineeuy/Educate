@@ -38,5 +38,6 @@ const Questions = () => {
       </main></div>
     )
 }
+// accordian page in react and javascript
 
 export default Questions;
