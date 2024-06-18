@@ -1,9 +1,46 @@
-import React from "react";
+import { React, useState } from "react";
+import InputField from "../shared/inputField";
 
 const SignUp = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleFirstNameChange = (event) => {
+    console.log(event.target.value);
+    setFirstName(event.target.value);
+  };
+
+  const handleLastNameChange = (event) => {
+    console.log(event.target.value);
+    setLastName(event.target.value);
+  };
+
+  const handleEmailChange = (event) => {
+    console.log(event.target.value);
+    setEmail(event.target.value);
+  };
+
+  const handleNumberChange = (event) => {
+    console.log(event.target.value);
+    setNumber(event.target.value);
+  };
+
+  const handleUsernameChange = (event) => {
+    console.log(event.target.value);
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    console.log(event.target.value);
+    setPassword(event.target.value);
+  };
+
   return (
     <div>
-      {" "}
       <main className="signup">
         <section>
           <div>
@@ -11,34 +48,49 @@ const SignUp = () => {
           </div>
 
           <form>
-            <div>
-              <label htmlFor="firstName">First Name</label>
-              <input type="text" name="firstName" placeholder="First Name" />
-            </div>
-            <div>
-              <label htmlFor="lastName">Last Name</label>
-              <input type="text" name="lastName" placeholder="Last Name" />
-            </div>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" placeholder="email" />
-            </div>
-            <div>
-              <label htmlFor="number">Phone Number</label>
-              <input
-                type="number"
-                name="phonenumber"
-                placeholder="Phone Number"
-              />
-            </div>
-            <div>
-              <label htmlFor="username">Username</label>
-              <input type="text" name="username" placeholder="username" />
-            </div>
-            <div>
-              <label htmlFor="password">Password</label>
-              <input type="text" name="password" placeholder="password" />
-            </div>
+            <InputField
+              type="text"
+              inputName="First Name"
+              id="firstName"
+              value={firstName}
+              handleChange={handleFirstNameChange}
+            />
+            <InputField
+              type="text"
+              inputName="Last Name"
+              id="lastName"
+              value={lastName}
+              handleChange={handleLastNameChange}
+            />
+            <InputField
+              type="text"
+              inputName="Email"
+              id="email"
+              value={email}
+              handleChange={handleEmailChange}
+            />
+            <InputField
+              type="text"
+              inputName="Number"
+              id="number"
+              value={number}
+              handleChange={handleNumberChange}
+            />
+            <InputField
+              type="text"
+              inputName="Username"
+              id="username"
+              value={username}
+              handleChange={handleUsernameChange}
+            />
+            <InputField
+              type="text"
+              inputName="Password"
+              id="password"
+              value={password}
+              handleChange={handlePasswordChange}
+            />
+
             <div>
               <button>Submit</button>
             </div>

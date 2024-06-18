@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import studentImage from "../../public/images/student.jpg";
 
 const Home = () => {
   return (
@@ -16,6 +17,10 @@ const Home = () => {
             <button>Espanol</button>
           </div> --> */}
           <div>
+            <img
+              src={studentImage}
+              alt="group of students sitting paying attention"
+            ></img>
             <h2>Enter your zipcode in the search area.</h2>
           </div>
 

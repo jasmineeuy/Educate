@@ -1,26 +1,39 @@
-import React from "react";
+import {React,useState} from "react";
+import Card from "../shared/Card";
 
-const Search = () =>{
-    return(
-        <div><main className="search">
+
+//connect search here and send props to card to change info in car props.title etc
+
+const Search = () => {
+
+
+  const [search,setSearch]=useState=("");
+
+  const handleSearchChange = (event)=>{
+    console.log(event.target.value);
+    setSearch(event.target.value);
+
+  }
+
+
+  return (
+    <div>
+      <main className="search">
         <h1>Center Location</h1>
         <h2>
-          Please enter your zipcode in the search bar to find the nearest center.
+          Please enter your zipcode in the search bar to find the nearest
+          center.
         </h2>
         <div>
           <form>
-            <input type=" text" placeholder="Enter your zipcode" />
+            <input type="text" id="centerSearch" placeholder="Enter your zipcode" onChange={handleSearchChange} value={search}/>
             <i className="fa-solid fa-magnifying-glass"></i>
           </form>
         </div>
-        <article>
-          <h1>Center Name</h1>
-          <p>Address</p>
-          <p>Phone Number</p>
-          <p>hours of operation</p>
-        </article>
-      </main></div>
-    )
-}
+        <Card />
+      </main>
+    </div>
+  );
+};
 
 export default Search;

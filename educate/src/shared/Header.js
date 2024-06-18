@@ -1,20 +1,21 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBars} from "@fortawesome/free-solid-svg-icons";
-
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
     <div>
       <header>
         <div>
-          <h1></h1>
           {/* <i class="fa-solid fa-bars"></i> */}
           <FontAwesomeIcon icon={faBars} />
         </div>
         <nav>
           <ul>
+            <li>
+              <h1>Education</h1>
+            </li>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -27,9 +28,9 @@ const Header = () => {
             <li>
               <Link to="/center">Center</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/translate">Translate</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/questions">Question</Link>
             </li>

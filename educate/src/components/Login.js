@@ -1,6 +1,22 @@
-import React from "react";
+import { React, useState } from "react";
+import InputField from "../shared/inputField";
+import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+
+  const [password, setPassword] = useState("");
+
+  const handleUsernameChange = (event) => {
+    console.log(event.target.value);
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    console.log(event.target.value);
+    setPassword(event.target.value);
+  };
+
   return (
     <div>
       <main className="login">
@@ -11,17 +27,27 @@ const Login = () => {
 
           <form>
             <div>
-              <label htmlFor="username">Username</label>
-              <input type="text" name="username" />
+              <InputField
+                type="text"
+                inputName="Username"
+                id="username"
+                value={username}
+                handleChange={handleUsernameChange}
+              />
             </div>
             <div>
-              <label htmlFor="password">Password</label>
-              <input type="text" name="password" />
+              <InputField
+                type="text"
+                inputName="Password"
+                id="password"
+                value={password}
+                handleChange={handlePasswordChange}
+              />
             </div>
             <button>Login</button>
             <a>Forgot Password</a>
           </form>
-          <a href="signup.html">Create an account</a>
+          <Link to="signup">Create an account</Link>
         </section>
       </main>
     </div>

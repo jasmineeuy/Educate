@@ -12,6 +12,15 @@ const About = () => {
             not know the language. For now it is available in spanish and
             english but looking to expand to other languages.
           </p>
+          <section>
+            <h2>Were did the idea come from?</h2>
+            <p>
+              As a first generation student I experienced first hand the
+              frusturation my parents felt when they could not help me with
+              homework due to a language barrier. It was difficult for them to
+              not be able to help me and added a barrier to learning.
+            </p>
+          </section>
         </article>
       </main>
     </div>
