@@ -1,11 +1,15 @@
-function Card() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare} from "@fortawesome/free-solid-svg-icons";
+
+function Card({ name, address ,number}) {
   return (
     <div>
       <article>
-        <h1>Center Name</h1>
-        <p>Address</p>
-        <p>Phone Number</p>
+        <p>{name}</p>
+        <p>{address}</p>
+        <p>{number}</p>
         <p>hours of operation</p>
+        <FontAwesomeIcon icon={faPenToSquare}/>
       </article>
     </div>
   );

@@ -8,6 +8,7 @@ import Header from "./shared/Header";
 import Footer from "./shared/Footer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
+import Admin from "./components/Admin";
 
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
@@ -24,7 +25,8 @@ function App() {
         <Route path="/questions" element={<Questions />} />
         <Route path="/search" element={<Search />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login/signup" element={<SignUp />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
 
       <Footer />
