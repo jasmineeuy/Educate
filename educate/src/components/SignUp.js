@@ -8,6 +8,7 @@ const SignUp = () => {
   const [number, setNumber] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setErrorMessage] = useState("");
 
   const handleFirstNameChange = (event) => {
     console.log(event.target.value);
@@ -39,8 +40,28 @@ const SignUp = () => {
     setPassword(event.target.value);
   };
 
+  const newAccount = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    number: number,
+    username: username,
+    password: password,
+  };
+  console.log("newAccount", newAccount);
   const handleUserCreate = (event) => {
     event.preventDefault();
+    fetch(`http://localhost:8080/api/auth/signup`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newAccount),
+    })
+      .then((response) => response.json())
+      .then((result) => console.log(result))
+      .catch((error) => {
+        setErrorMessage(error);
+        console.log(error);
+      });
   };
 
   return (

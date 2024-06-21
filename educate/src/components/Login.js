@@ -17,6 +17,23 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
+  const user = {
+    username: username,
+    password: password,
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    fetch(`http://localhost/api/auth/login/local`, {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(user),
+    })
+      .then((response) => response.json())
+      .then((result) => console.log(result))
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       <main className="login">
@@ -25,7 +42,7 @@ const Login = () => {
             <h2>Log In</h2>
           </div>
 
-          <form>
+          <form onSubmit={handleLogin}>
             <div>
               <InputField
                 type="text"
