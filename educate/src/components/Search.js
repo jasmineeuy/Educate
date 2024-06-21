@@ -47,6 +47,7 @@ const Search = () => {
             <input
               type="number"
               minLength="5"
+              maxLength="5"
               id="centerSearch"
               placeholder="Enter your zipcode"
               onChange={handleSearchChange}
@@ -56,13 +57,18 @@ const Search = () => {
             {/* <i className="fa-solid fa-magnifying-glass"></i> */}
           </form>
         </div>
-        {centerList.map((center) => (
-          <Card
-            name={center.name}
-            address={center.address}
-            number={center.number}
-          />
-        ))}
+        {console.log("num", centerList.length)}
+        {centerList.length === 0 ? (
+          <p>No centers found please enter another zipcode</p>
+        ) : (
+          centerList.map((center) => (
+            <Card
+              name={center.name}
+              address={center.address}
+              number={center.number}
+            />
+          ))
+        )}
       </main>
     </div>
   );

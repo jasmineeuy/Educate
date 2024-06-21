@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const [zipCode, setZipCode] = useState("");
+  const navigate = useNavigate();
+  const handleZipCodeChange = (event) => {
+    console.log(event.target.value);
+    setZipCode(event.target.value);
+  };
+
+  const handleZipCodeSearch = (event) => {
+    event.preventDefault();
+    navigate("/search");
+  };
+
   return (
     <div>
       <main>
@@ -19,9 +32,17 @@ const Home = () => {
             <h2>Enter your zipcode in the search area.</h2>
           </div>
 
-          <form>
-            <input type=" text" placeholder="Enter your zipcode" />
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <form onSubmit={handleZipCodeSearch}>
+            <input
+              type=" number"
+              minLength="5"
+              maxLength="5"
+              placeholder="Enter your zipcode"
+              onChange={handleZipCodeChange}
+              value={zipCode}
+            />
+            {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
+            <button>Search</button>
           </form>
         </section>
 

@@ -26,20 +26,36 @@ const Admin = () => {
   console.log("centers", allCenters);
   console.log("errorMessage", errorMessage);
 
+  // const approved = true;
+  const approved = allCenters.filter((center) => center.approved === false);
+  console.log("approve", approved);
+  const notApproved = allCenters.filter((center) => center.approved === true);
+  console.log("no", notApproved);
+
   return (
     <div>
       <main>
         <h1>Admin</h1>
+
+        <h2>Approved</h2>
+        {approved.map((center) => (
+          <Card
+            key={center.id}
+            name={center.name}
+            address={center.address}
+            number={center.number}
+          />
+        ))}
+
         <h2>Pending</h2>
-        {allCenters.map((center) => {
-          return (
-            <Card
-              name={center.name}
-              address={center.address}
-              number={center.number}
-            />
-          );
-        })}
+        {notApproved.map((center) => (
+          <Card
+            key={center.id}
+            name={center.name}
+            address={center.address}
+            number={center.number}
+          />
+        ))}
       </main>
     </div>
   );

@@ -39,6 +39,10 @@ const SignUp = () => {
     setPassword(event.target.value);
   };
 
+  const handleUserCreate = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div>
       <main className="signup">
@@ -47,7 +51,7 @@ const SignUp = () => {
             <h2>Sign Up</h2>
           </div>
 
-          <form>
+          <form onSubmit={handleUserCreate}>
             <InputField
               type="text"
               inputName="First Name"
