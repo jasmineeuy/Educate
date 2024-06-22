@@ -9,6 +9,8 @@ import Footer from "./shared/Footer";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import Admin from "./components/Admin";
+import LoggedIn from "./components/LoggedIn";
+import EditForm from "./components/EditForm";
 
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
@@ -27,6 +29,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/login/signup" element={<SignUp />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/loggedin" element={<LoggedIn />} />
+        <Route path="/edit" index element={<EditForm />} />
       </Routes>
 
       <Footer />

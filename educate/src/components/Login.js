@@ -1,11 +1,13 @@
 import { React, useState } from "react";
 import InputField from "../shared/inputField";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
 
   const [password, setPassword] = useState("");
+  const [loggedIn, isLoggedIn] = useState("");
+  const navigate = useNavigate();
 
   const handleUsernameChange = (event) => {
     console.log(event.target.value);
@@ -24,14 +26,17 @@ const Login = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    fetch(`http://localhost/api/auth/login/local`, {
+    fetch(`http://localhost:8080/api/auth/login/local`, {
       method: "POST",
-      headers: {"Content-Type":"application/json"},
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(user),
     })
       .then((response) => response.json())
-      .then((result) => console.log(result))
+      .then((result) => console.log("result",result))
       .catch((error) => console.log(error));
+    if (loggedIn === true) {
+      navigate("/loggedin");
+    }
   };
 
   return (
