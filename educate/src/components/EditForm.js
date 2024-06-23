@@ -5,9 +5,11 @@ import InputField from "../shared/inputField";
 const EditForm = () => {
   const navigate = useNavigate();
   const { centerId } = useParams();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const [center, setCenterState] = useState({});
-  useEffect = () => {
+
+  useEffect(() => {
     fetch(`http://localhost:8080/api/admin/center/${centerId}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
@@ -20,16 +22,19 @@ const EditForm = () => {
         } else {
           throw new Error(result.error.message);
         }
-      });
-  };
+      })
+      .catch((error) => setErrorMessage(error.message));
+  }, []);
+
   const submitCenterForm = (event) => {
-    event.preventdefault();
+    event.preventDefault();
     const body = {
       name: event.target.name.value,
       address: event.target.address.value,
-      zipcode: event.target.zipCode.value,
+      zipcode: event.target.zipcode.value,
       number: event.target.number.value,
       email: event.target.email.value,
+      approved: event.target.approved.value,
     };
     fetch(`http://localhost:8080/api/admin/update/${centerId}`, {
       method: "PUT",
@@ -38,8 +43,9 @@ const EditForm = () => {
     })
       .then((response) => response.json())
       .then((result) => {
+        console.log(result.statusCode);
         if (result.statusCode === 200) {
-          console.log(result);
+          console.log("resultfrom edit", result);
           setCenterState(result.data);
           navigate("/admin");
         } else {
@@ -47,12 +53,11 @@ const EditForm = () => {
         }
       });
   };
+  console.log("centername", center);
 
   const onInputChange = (event) => {
     console.log(event.target.value);
   };
-
-  
 
   return (
     <div>
@@ -61,37 +66,45 @@ const EditForm = () => {
           type="text"
           inputName="Name"
           id="name"
-          value="centerName"
+          placeholder={center.name}
           handleChange={onInputChange}
         />
         <InputField
           type="text"
           inputName="Address"
-          id="Address"
-          value="address"
+          id="address"
+          placeholder={center.address}
           handleChange={onInputChange}
         />
         <InputField
-          type="text"
+          type="number"
           inputName="zipcode"
+          placeholder={center.zipcode}
           id="zipcode"
-          value="zipCode"
           handleChange={onInputChange}
         />
         <InputField
-          type="text"
+          type="number"
           inputName="Number"
-          id="Number"
-          value="number"
+          placeholder={center.number}
+          id="number"
           handleChange={onInputChange}
         />
         <InputField
-          type="text"
+          type="email"
           inputName="Email"
           id="email"
-          value="email"
+          placeholder={center.email}
           handleChange={onInputChange}
         />
+        <InputField
+          type="boolean"
+          inputName="Approved"
+          id="approved"
+          placeholder={center.approved}
+          handleChange={onInputChange}
+        />
+        <button>Enter</button>
       </form>
     </div>
   );

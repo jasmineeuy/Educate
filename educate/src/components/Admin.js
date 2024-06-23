@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Card from "../shared/Card";
 const Admin = () => {
   const [allCenters, setAllCenters] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:8080/api/centers/`, {
@@ -34,21 +35,23 @@ const Admin = () => {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
+        console.log("working",result);
+        navigate("/admin");
       })
       .catch((error) => setErrorMessage(error.message));
   };
-  const update = () => {
-    <Link to="/edit">Edit</Link>;
+  const updateCenter = (id) => {
+    console.log("id", id);
+    navigate(`/edit/${id}`);
     console.log("clicked");
   };
   console.log("centers", allCenters);
   console.log("errorMessage", errorMessage);
 
   // const approved = true;
-  const approved = allCenters.filter((center) => center.approved === false);
+  const approved = allCenters.filter((center) => center.approved === true);
   console.log("approve", approved);
-  const notApproved = allCenters.filter((center) => center.approved === true);
+  const notApproved = allCenters.filter((center) => center.approved === false);
   console.log("no", notApproved);
 
   return (
@@ -63,10 +66,9 @@ const Admin = () => {
             name={center.name}
             address={center.address}
             number={center.number}
-            onClick={()=>deleteCenter(center._id)}
-            update={update()}
+            handleDelete={() => deleteCenter(center._id)}
+            handleEdit={() => updateCenter(center._id)}
           />
-          
         ))}
 
         <h2>Pending</h2>
@@ -76,8 +78,8 @@ const Admin = () => {
             name={center.name}
             address={center.address}
             number={center.number}
-            // onClick={deleteCenter(center._id)}
-            // update={<Link to="/edit">Edit</Link>}
+            handleDelete={() => deleteCenter(center._id)}
+            handleEdit={() => updateCenter(center._id)}
           />
         ))}
       </main>

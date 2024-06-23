@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  fa1,
+  fa2,
+  fa3,
+} from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -24,7 +29,7 @@ const Home = () => {
             <h2>Choose Your Language:</h2>
             <h2>Elige tu idioma:</h2>
           </div> -->
-          <!-- <div class="translate-btn">
+          <!-- <div className="translate-btn">
             <button>English</button>
             <button>Espanol</button>
           </div> --> */}
@@ -46,25 +51,25 @@ const Home = () => {
           </form>
         </section>
 
-        <article class="index">
-          <div class="info">
-            <i class="fa-solid fa-1"></i>
+        <article className="index">
+          <div className="info">
+            <FontAwesomeIcon icon={fa1} />
             <div>
               {/* <!-- <p>Choose your Language</p>
               <p>Elige tu idioma</p> --> */}
               <p>Add your address to the search bar</p>
             </div>
           </div>
-          <div class="info">
-            <i class="fa-solid fa-2"></i>
+          <div className="info">
+            <FontAwesomeIcon icon={fa2} />
             <div>
               {/* <!-- <p>Add your address to the search bar</p>
               <p>Anade tu direcion a la bara de busqueda</p> --> */}
               <p>See a list of homework help centers near you</p>
             </div>
           </div>
-          <div class="info">
-            <i class="fa-solid fa-3"></i>
+          <div className="info">
+            <FontAwesomeIcon icon={fa3} />
             <div>
               {/* <!-- <p>See a list of homework help centers near you</p>
               <p>Vea una list de centros de ayuda cerca de ti</p> --> */}
@@ -72,8 +77,9 @@ const Home = () => {
             </div>
           </div>
         </article>
-        <section class="chat-contain">
-          <h2>Check our community chat for help!</h2>
+        <section className="chat-contain">
+          <h2>Upcoming Updates</h2>
+          <h3>Check our community chat for help!</h3>
           <p>
             With our community chat you can post and image or comment about your
             child's homework question. Our members can then help with

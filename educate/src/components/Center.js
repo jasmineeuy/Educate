@@ -32,16 +32,17 @@ const Center = () => {
     console.log(event.target.value);
     setZipCode(event.target.value);
   };
-  const newCenter = {
-    name: centerName,
-    address: address,
-    zipcode: zipCode,
-    number: number,
-    email: email,
-  };
+  
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    const newCenter = {
+      name: centerName,
+      address: address,
+      zipcode: zipCode,
+      number: number,
+      email: email,
+    };
 
     console.log(newCenter);
     fetch(`http://localhost:8080/api/centers/add-facility`, {
@@ -67,33 +68,33 @@ const Center = () => {
             <InputField
               type="text"
               inputName="Name"
-              id="name"
+              id="centerName"
               value={centerName}
               handleChange={handleCenterNameChange}
             />
             <InputField
               type="text"
               inputName="Address"
-              id="Address"
+              id="address"
               value={address}
               handleChange={handleCenterAddressChange}
             />
             <InputField
-              type="text"
+              type="number"
               inputName="zipcode"
-              id="zipcode"
+              id="zipCode"
               value={zipCode}
               handleChange={handleZipCodeChange}
             />
             <InputField
-              type="text"
+              type="number"
               inputName="Number"
-              id="Number"
+              id="number"
               value={number}
               handleChange={handleCenterNumberChange}
             />
             <InputField
-              type="text"
+              type="email"
               inputName="Email"
               id="email"
               value={email}

@@ -9,7 +9,9 @@ function inputField(props) {
         id={props.id}
         type={props.type}
         value={props.value}
+        placeholder={props.placeholder}
         onChange={props.handleChange}
+        
       />
     </>
   );

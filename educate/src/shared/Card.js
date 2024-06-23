@@ -1,10 +1,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 import "../css/Card.css";
 // import Edit from "Card.js"
 
-function Card({ name, address, number, onClick, key,update }) {
+function Card({
+  name,
+  address,
+  number,
+  handleDelete,
+  handleEdit,
+  key,
+  approved,
+
+}) {
   return (
     <div>
       <article className="card-container">
@@ -12,15 +22,15 @@ function Card({ name, address, number, onClick, key,update }) {
           <p>{name}</p>
           <p>{address}</p>
           <p>{number}</p>
-          <p>hours of operation</p>
+          <p>{approved}</p>
+          
+          
         </div>
 
-        <button onClick={onClick}>
-          {update}
+        <button onClick={handleEdit}>
           <FontAwesomeIcon icon={faPenToSquare} />
         </button>
-        <button onClick={onClick}>
-          {update}
+        <button onClick={handleDelete}>
           <FontAwesomeIcon icon={faTrash} />
         </button>
       </article>

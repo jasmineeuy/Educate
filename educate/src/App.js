@@ -30,7 +30,7 @@ function App() {
         <Route path="/login/signup" element={<SignUp />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/loggedin" element={<LoggedIn />} />
-        <Route path="/edit" index element={<EditForm />} />
+        <Route path="/edit/:centerId" element={<EditForm />} />
       </Routes>
 
       <Footer />
