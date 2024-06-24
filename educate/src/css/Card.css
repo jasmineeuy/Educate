@@ -3,15 +3,23 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  width: 70%;
-  margin: 10px;
+  width: 80%;
+  margin: 1em auto;
   justify-content: space-between;
   padding: 20px;
   border-radius: 10px;
 }
 
-.card-container div {
+/* .card-container div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+} */
+
+.card-button-container{
+  display: flex;
+  flex-direction: row;
+  width:10%;
+  justify-content: space-between;
+
 }

@@ -13,28 +13,26 @@ function Card({
   handleEdit,
   key,
   approved,
-
 }) {
   return (
-    <div>
+    <>
       <article className="card-container">
         <div key={key}>
           <p>{name}</p>
           <p>{address}</p>
           <p>{number}</p>
           <p>{approved}</p>
-          
-          
         </div>
-
-        <button onClick={handleEdit}>
-          <FontAwesomeIcon icon={faPenToSquare} />
-        </button>
-        <button onClick={handleDelete}>
-          <FontAwesomeIcon icon={faTrash} />
-        </button>
+        <div className="card-button-container">
+          <button onClick={handleEdit}>
+            <FontAwesomeIcon icon={faPenToSquare} />
+          </button>
+          <button onClick={handleDelete}>
+            <FontAwesomeIcon icon={faTrash} />
+          </button>
+        </div>
       </article>
-    </div>
+    </>
   );
 }
 

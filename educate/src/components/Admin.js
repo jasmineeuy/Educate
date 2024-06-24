@@ -5,6 +5,7 @@ import Card from "../shared/Card";
 const Admin = () => {
   const [allCenters, setAllCenters] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
+  const [deleted, setDeleted] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -35,8 +36,7 @@ const Admin = () => {
     })
       .then((response) => response.json())
       .then((result) => {
-        console.log("working",result);
-        navigate("/admin");
+        console.log("working", result);
       })
       .catch((error) => setErrorMessage(error.message));
   };

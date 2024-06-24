@@ -13,11 +13,12 @@ import LoggedIn from "./components/LoggedIn";
 import EditForm from "./components/EditForm";
 
 import "./App.css";
+import "./css/MediaQueries.css"
 import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
 
       <Routes>
@@ -34,7 +35,7 @@ function App() {
       </Routes>
 
       <Footer />
-    </div>
+    </>
   );
 }
 

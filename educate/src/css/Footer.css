@@ -1,0 +1,20 @@
+/**********footer*************/
+footer {
+  background-color: white;
+ 
+}
+footer p {
+  display: none;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0px;
+  list-style-type: none;
+}
+footer ul li {
+  font-size: 1.5em;
+}

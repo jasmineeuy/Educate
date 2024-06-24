@@ -35,27 +35,29 @@ const Search = () => {
   };
   console.log(centerList);
   return (
-    <div>
+    <>
       <main className="search">
-        <h1>Center Location</h1>
-        <h2>
-          Please enter your zipcode in the search bar to find the nearest
-          center.
-        </h2>
-        <div>
-          <form onSubmit={handleCenterSearch}>
-            <input
-              type="number"
-              minLength="5"
-              maxLength="5"
-              id="centerSearch"
-              placeholder="Enter your zipcode"
-              onChange={handleSearchChange}
-              value={zipCode}
-            />
-            <button>Enter</button>
-            {/* <i className="fa-solid fa-magnifying-glass"></i> */}
-          </form>
+        <div className="search-container">
+          <h1>Center Location</h1>
+          <h2>
+            Please enter your zipcode in the search bar to find the nearest
+            center.
+          </h2>
+          <div>
+            <form onSubmit={handleCenterSearch}>
+              <input
+                type="number"
+                minLength="5"
+                maxLength="5"
+                id="centerSearch"
+                placeholder="Enter your zipcode"
+                onChange={handleSearchChange}
+                value={zipCode}
+              />
+              <button>Enter</button>
+              {/* <i className="fa-solid fa-magnifying-glass"></i> */}
+            </form>
+          </div>
         </div>
         {console.log("num", centerList.length)}
         {centerList.length === 0 ? (
@@ -70,7 +72,7 @@ const Search = () => {
           ))
         )}
       </main>
-    </div>
+    </>
   );
 };
 

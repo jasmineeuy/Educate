@@ -7,7 +7,7 @@ import {
   fa3,
 } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
-
+import background from "../images/background-green.jpg";
 const Home = () => {
   const [zipCode, setZipCode] = useState("");
   const navigate = useNavigate();
@@ -33,22 +33,29 @@ const Home = () => {
             <button>English</button>
             <button>Espanol</button>
           </div> --> */}
-          <div>
-            <h2>Enter your zipcode in the search area.</h2>
-          </div>
+          <img
+            src={background}
+            alt="background  with school supplies, pencil, books, globe"
+            style={{width:"100%"}}
+          />
+          <section className="textOverBackground">
+            <div>
+              <h2>Enter your zipcode in the search area.</h2>
+            </div>
 
-          <form onSubmit={handleZipCodeSearch}>
-            <input
-              type=" number"
-              minLength="5"
-              maxLength="5"
-              placeholder="Enter your zipcode"
-              onChange={handleZipCodeChange}
-              value={zipCode}
-            />
-            {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
-            <button>Search</button>
-          </form>
+            <form onSubmit={handleZipCodeSearch}>
+              <input
+                type=" number"
+                minLength="5"
+                maxLength="5"
+                placeholder="Enter your zipcode"
+                onChange={handleZipCodeChange}
+                value={zipCode}
+              />
+              {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
+              <button>Search</button>
+            </form>
+          </section>
         </section>
 
         <article className="index">

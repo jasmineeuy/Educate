@@ -1,363 +1,172 @@
 * {
-    box-sizing: border-box;
-  }
-  .hidden {
-    display: none;
-  }
-  body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    /* font-size: 1.5em; */
-  }
-  a {
-    text-decoration: none;
-  }
-  header {
-    background-color: white;
-    height: 10vh;
-  }
-  main {
-    display: flex;
-    flex: 1;
-    margin: 10px 0px;
-    flex-direction: column;
-  }
-  .translate-btn button {
-    border: white;
-    border-radius: 4px;
-    background-color: white;
-  }
-  main section form input {
-    height: 40px;
-    border-radius: 4px;
-    border: white;
-  }
-  .question-contain {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  .question {
-    border: none;
-    font-weight: bold;
-    border-radius: 4px;
-    background-color: white;
-    height: auto;
-    font-size: 1em;
-    margin: 10px 10px;
-  }
-  .answer {
-    font-size: 1em;
-    margin: 10px;
-    padding: 1em;
-    background-color: white;
-  }
-  
-  nav ul li a:hover {
-    background-color: bisque;
-  }
-  
-  .form article,
-  .form form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    background-color: white;
-    margin: auto;
-  }
-  
-  .form h1,
-  .form h2,
-  main h1,
-  main h2,
-  .search div form {
-    text-align: center;
-  }
-  .form form label,
-  .form form input,
-  .form form button {
-    margin: 10px;
-    height: 40px;
-  }
-  .search article {
-    background-color: white;
-  }
-  
-  main section,
-  main article,
-  .login section form div,
-  .signup section form div {
-    margin: 10px 0px;
-  }
-  
-  main section div button {
-    background-color: white;
-    padding: 10px;
-    margin: 20px;
-  }
-  main section form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .login section form div {
-    width: 90%;
-  }
-  .login section form,
-  .signup section form {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid;
-  }
-  
-  .login section form div label {
-    flex: 1;
-    width: 30%;
-  }
-  .login section form div input {
-    flex: 2;
-    width: 90%;
-    text-align: center;
-  }
-  .login form {
-    background-color: wheat;
-  }
-  
-  /***********About************/
-  .about {
-    height: 80vh;
-    background-color: white;
-    text-align: center;
-  }
-  
-  /*********Admin***********/
-  .admin ul {
-    background-color: white;
-    margin: 10px;
-    padding: 10px;
-    list-style-type: none;
-  }
-  /**********translate*********/
-  .translate form {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-  }
-  
-  .translate .chat {
-    display: flex;
-    flex-direction: column;
-    height: 10vh;
-    justify-content: space-between;
-  }
-  /**********footer*************/
-  footer p {
-    display: none;
-  }
-  footer {
-    background-color: white;
-  }
-  
-  footer ul {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-around;
-    padding: 0px;
-    list-style-type: none;
-  }
-  footer ul li {
-    font-size: 1.5em;
-  }
-  /*********** Media *************/
-  
-  @media screen and (min-width: 320px) and (max-width: 480px) {
-    body {
-      background-color: blanchedalmond;
-    }
-    /********** header styling ***********/
-    header ul {
-      display: none;
-    }
-    header div {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header div i {
-      font-size: 40px;
-    }
-  
-    /***********Index Page*************/
-    main section,
-    body .about {
-      /* text-align: center; */
-      background-color: white;
-      /* padding: 10px;
-      margin-top: 10%; */
-    }
-    .index {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding: 10px 1px;
-    }
-    .index .info {
-      display: flex;
-      width: 100%;
-      margin: 10px 0px;
-      align-items: center;
-      background-color: white;
-    }
-    .info div {
-      flex: 2 80%;
-      margin: 10px 0px;
-      padding: 1px;
-    }
-    .info i {
-      flex: 1 20%;
-      text-align: center;
-      font-size: 2em;
-    }
-    .form article {
-      width: 100%;
-    }
-  
-    /******Search**********/
-  
-    .search h1,
-    h2,
-    div {
-      text-align: center;
-    }
-  }
-  
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    body {
-      background-color: rgb(192, 232, 100);
-      /* font-size: 1.5em; */
-    }
-    /************heading*************/
-    header ul {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      list-style-type: none;
-      justify-content: space-around;
-      align-items: center;
-      margin: 0;
-    }
-    header div {
-      display: none;
-    }
-    /************** index *****************/
-    section {
-      text-align: center;
-    }
-    .index {
-      display: flex;
-    }
-    .info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: white;
-      justify-content: space-evenly;
-      margin: 10px;
-      text-align: center;
-      flex: 1;
-      border-radius: 10px;
-    }
-    .info div {
-      flex: 2 80%;
-      margin: 10px 0px;
-      padding: 10px;
-    }
-    .info i {
-      flex: 1 10%;
-      text-align: center;
-      font-size: 2em;
-      margin: 20px;
-    }
-  
-    /***********Search**************/
-  
-    /*********Admin***********/
-    .admin main {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      margin: 0px 10px;
-    }
-    .admin ul {
-      list-style-type: none;
-      background-color: white;
-      display: flex;
-      justify-content: space-between;
-    }
-    .admin main ul i {
-      font-size: 1.4em;
-    }
-    .admin h1,
-    h2 {
-      text-align: center;
-    }
-    .chat-contain {
-      margin: 10px 10px;
-      border-radius: 10px;
-      background-color: white;
-    }
-  }
-  
-  @media screen and (min-width: 769px) {
-    body {
-      background-color: rgb(75, 212, 178);
-    }
-    header ul {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      list-style-type: none;
-      justify-content: space-around;
-      align-items: center;
-      margin: 0;
-      text-decoration: none;
-    }
-    header div {
-      display: none;
-    }
-    .index {
-      display: flex;
-    }
-    .info {
-      height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-      border-radius: 10px;
-      flex: 1;
-      margin: 0px 10px;
-    }
-  
-    .info div {
-      margin: 10px;
-    }
-    .info i {
-      font-size: 2em;
-    }
-    section {
-      text-align: center;
-    }
-    .chat-contain {
-      margin: 10px 10px;
-      border-radius: 10px;
-  
-      background-color: white;
-    }
-  }
+  box-sizing: border-box;
+}
+.hidden {
+  display: none;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* font-size: 1.5em; */
+  background-color: rgb(62, 107, 62);
+}
+
+main {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.textOverBackground {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 70%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+.translate-btn button {
+  border: white;
+  border-radius: 4px;
+  background-color: white;
+}
+main section form input {
+  height: 40px;
+  border-radius: 4px;
+  border: white;
+  border: 1px solid black;
+}
+.question-contain {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.question {
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: white;
+  height: auto;
+  font-size: 1em;
+  margin: 10px 10px;
+}
+.answer {
+  font-size: 1em;
+  margin: 10px;
+  padding: 1em;
+  background-color: white;
+}
+
+.form article,
+.form form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+  /* padding:1em; */
+}
+
+.search {
+  background-image: url("./images/background-green.jpg");
+  background-size: contain;
+
+}
+
+.search-container {
+  background-color: white;
+}
+
+.form h1,
+.form h2,
+main h1,
+main h2,
+.search div form {
+  text-align: center;
+}
+.form form label,
+.form form input,
+.form form button {
+  margin: 10px;
+  height: 40px;
+}
+.search article {
+  background-color: white;
+}
+
+main section,
+main article,
+.login section form div,
+.signup section form div {
+  margin: 10px 0px;
+}
+
+main section div button {
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+}
+main section form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.login section form div {
+  width: 90%;
+}
+.login section form,
+.signup section form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+}
+
+.login section form div label {
+  flex: 1;
+  width: 30%;
+}
+.login section form div input {
+  flex: 2;
+  width: 90%;
+  text-align: center;
+}
+.login form {
+  background-color: wheat;
+}
+
+/***********About************/
+.about {
+  height: 80vh;
+  background-color: white;
+  text-align: center;
+}
+
+/*********Admin***********/
+.admin ul {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: none;
+}
+/**********translate*********/
+.translate form {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.translate .chat {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  justify-content: space-between;
+}

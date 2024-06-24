@@ -1,0 +1,205 @@
+/*********** Media *************/
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    background-color: blanchedalmond;
+  }
+  /********** header styling ***********/
+  header ul {
+    display: none;
+  }
+  header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header div i {
+    font-size: 40px;
+  }
+
+  /***********Index Page*************/
+  main section,
+  body .about {
+    /* text-align: center; */
+    background-color: white;
+    /* padding: 10px;
+      margin-top: 10%; */
+  }
+  .index {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px 1px;
+    
+  }
+  .index .info {
+    display: flex;
+    width: 100%;
+    margin: 10px 0px;
+    align-items: center;
+    background-color: white;
+
+  }
+  .info div {
+    flex: 2 80%;
+    margin: 10px 0px;
+    padding: 1px;
+  }
+  .info i {
+    flex: 1 20%;
+    text-align: center;
+    font-size: 2em;
+  }
+  .form article {
+    width: 100%;
+  }
+
+  /******Search**********/
+
+  .search h1,
+  h2,
+  div {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    /* background-color: rgb(192, 232, 100); */
+    /* font-size: 1.5em; */
+  }
+  /************heading*************/
+  header ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+  header div {
+    display: none;
+  }
+  /************** index *****************/
+  section {
+    text-align: center;
+  }
+  .index {
+    display: flex;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    justify-content: space-evenly;
+    margin: 10px;
+    text-align: center;
+    flex: 1;
+    border-radius: 10px;
+  }
+  .info div {
+    flex: 2 80%;
+    margin: 10px 0px;
+    padding: 10px;
+  }
+  .info i {
+    flex: 1 10%;
+    text-align: center;
+    font-size: 2em;
+    margin: 20px;
+  }
+
+  /***********Search**************/
+  .search-container {
+    width:80%;
+    height:50vh;
+    margin:auto;
+    border-radius: 10px;
+   
+  }
+
+  /*********Admin***********/
+  .admin main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 10px;
+  }
+  .admin ul {
+    list-style-type: none;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  .admin main ul i {
+    font-size: 1.4em;
+  }
+  .admin h1,
+  h2 {
+    text-align: center;
+  }
+  .chat-contain {
+    margin: 10px 10px;
+    border-radius: 10px;
+    background-color: white;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    /* background-color: rgb(75, 212, 178); */
+  }
+  header ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    text-decoration: none;
+  }
+  header div {
+    display: none;
+  }
+  .index {
+    display: flex;
+  }
+  .info {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    flex: 1;
+    margin: 0px 10px;
+    border: 1px solid black;
+  }
+
+  .info div {
+    margin: 10px;
+  }
+  .info i {
+    font-size: 2em;
+  }
+  section {
+    text-align: center;
+  }
+  .chat-contain {
+    margin: 10px 10px;
+    border-radius: 10px;
+
+    background-color: white;
+  }
+  .search-container {
+    width:80%;
+    height:50vh;
+    margin:auto;
+    border-radius: 10px;
+  }
+}

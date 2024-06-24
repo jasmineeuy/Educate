@@ -44,7 +44,7 @@ const EditForm = () => {
       .then((response) => response.json())
       .then((result) => {
         console.log(result.statusCode);
-        if (result.statusCode === 200) {
+        if (result.statusCode === 201) {
           console.log("resultfrom edit", result);
           setCenterState(result.data);
           navigate("/admin");
