@@ -1,10 +1,11 @@
 /*********** Media *************/
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  body {
-    background-color: blanchedalmond;
-  }
+
   /********** header styling ***********/
+  header{
+    height:10vh;
+  }
   header ul {
     display: none;
   }
@@ -17,12 +18,19 @@
   header div i {
     font-size: 40px;
   }
+  .home img {
+    display: none;
+  }
+  main {
+    background-color: rgb(62, 107, 62);
+  }
 
   /***********Index Page*************/
   main section,
   body .about {
     /* text-align: center; */
-    background-color: white;
+    /* background-color: white; */
+    background-color: #9dce5b;
     /* padding: 10px;
       margin-top: 10%; */
   }
@@ -30,8 +38,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 10px 1px;
-    
   }
   .index .info {
     display: flex;
@@ -39,7 +45,7 @@
     margin: 10px 0px;
     align-items: center;
     background-color: white;
-
+    padding: 0px 10%;
   }
   .info div {
     flex: 2 80%;
@@ -114,11 +120,23 @@
 
   /***********Search**************/
   .search-container {
-    width:80%;
-    height:50vh;
-    margin:auto;
+    width: 80%;
+    height: 50vh;
+    margin: auto;
     border-radius: 10px;
-   
+    margin-top: 10%;
+  }
+  .textOverBackground {
+    position: absolute;
+    width:78%;
+    height:60%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -28%);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: white;
   }
 
   /*********Admin***********/
@@ -197,9 +215,22 @@
     background-color: white;
   }
   .search-container {
-    width:80%;
-    height:50vh;
-    margin:auto;
+    width: 80%;
+    height: 50vh;
+    margin: auto;
     border-radius: 10px;
+  }
+
+  .textOverBackground {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    width:80%;
+    height:70%;
   }
 }

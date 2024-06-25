@@ -10,7 +10,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   /* font-size: 1.5em; */
-  background-color: rgb(62, 107, 62);
+  background-color: white;
+
 }
 
 main {
@@ -18,20 +19,11 @@ main {
   flex: 1;
   min-height: 100vh;
   flex-direction: column;
+  background-color: rgb(62, 107, 62);
+
 }
-.textOverBackground {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  width: 70%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: 10px;
-}
+
+
 .translate-btn button {
   border: white;
   border-radius: 4px;
@@ -78,7 +70,6 @@ main section form input {
 .search {
   background-image: url("./images/background-green.jpg");
   background-size: contain;
-
 }
 
 .search-container {

@@ -24,19 +24,11 @@ const Home = () => {
   return (
     <div>
       <main>
-        <section>
-          {/* <!-- <div>
-            <h2>Choose Your Language:</h2>
-            <h2>Elige tu idioma:</h2>
-          </div> -->
-          <!-- <div className="translate-btn">
-            <button>English</button>
-            <button>Espanol</button>
-          </div> --> */}
+        <section className="home">
           <img
             src={background}
             alt="background  with school supplies, pencil, books, globe"
-            style={{width:"100%"}}
+            style={{ width: "100%" }}
           />
           <section className="textOverBackground">
             <div>

@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "../css/Header.css";
 
+
+
 const Header = () => {
   return (
     <>
@@ -15,7 +17,7 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <h1>Education</h1>
+             <h1>EDUCA+E</h1>
             </li>
             <li>
               <Link to="/">Home</Link>
